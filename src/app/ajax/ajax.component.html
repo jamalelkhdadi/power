@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">AJAX</h6>
+                </div>
+                <div class="card-body">
+                    <button onclick="getRepos()">Get Repos</button>
+                    <div id="demo">yes</div>
+                    <script>
+                        // Make Functin to do the Request
+                        function getRepos() {
+                            // Assign the request object to variable
+                            var myRequest = new XMLHttpRequest();
+                            // function called when rady state change
+                            myRequest.onreadystatechange = function () {
+                                if (this.readyState === 4 && this.status === 200) {
+                                    console.log(this.responseText);
+                                    console.log(content);
+                                    $('#demo').html(content);
+
+                                }
+                            };
+
+                            myRequest.open(
+                                'GET',
+                                'https://api.github.com/users/jamalelkhdadi/repos',
+                                true
+                            );
+                            myRequest.send();
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">AJAX</h6>
+                </div>
+                <div class="card-body">
+                    <!--jquery ajax-->
+                    <button>Get Repos</button>
+                    <div id="show"></div>
+                    <script>
+                        $(function () {
+                            $.ajax({
+
+                                url: 'https://api.github.com/users/jamalelkhdadi/repos',
+                                dataType: 'json',
+                                cache: false,
+                                success: function (data, status) {
+                                    var content = "";
+                                    for (var x in data) {
+                                        content += "<div class='a'>" + data[x].username + "</div>" + "<div class='b'>" + data[x].age + "</div>";
+                                    }
+                                    console.log(content);
+                                    $('#show').html(content);
+                                },
+                                error: function (xhr, textStatus, err) {
+                                    console.log(xhr);
+                                    console.log(textStatus);
+                                    console.log(err);
+                                }
+                            });
+                        });
+                    </script>
+                    <code>https://api.github.com/users/jamalelkhdadi/repos</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
