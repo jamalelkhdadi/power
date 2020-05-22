@@ -1,138 +1,239 @@
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
-  <!-- Brand -->
-  <a class="navbar-brand" routerLink="home">
-    <img width="40px" src="../assets/img/logo-black.png" alt="Tutorials">
+<div
+  style='display:none;position:absolute;z-index:6;right:60px;height:50px;padding-top:10px;padding-right:20px;background-color:black;'
+  id='googleSearch'>
+  <div class='gcse-search'></div>
+</div>
+<div
+  style='display:none;position:absolute;z-index:5;right:120px;height:57px;background-color:black;text-align:right;padding-top:15px;'
+  id='google_translate_element'></div>
+<div class="w3-bar w3-theme w3-card-2 w3-wide notranslate">
+  <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 hidesm" href="javascript:void(0)" onclick="w3_open()">
+    <i class="fa fa-bars text-primary"></i>
   </a>
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="home"><i class="fa fa-check"></i>&nbsp;Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="website"><i class="fa fa-check"></i>&nbsp;Professional websites</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="commands"><i class="fa fa-check"></i>&nbsp;Commands</a>
-      </li>
-    </ul>
-    <a routerLink="login" style="margin-left: 300px;">
-      <button type="button" class="btn btn-outline-primary">
-        <i class="fa fa-user"></i>
-        LOGIN
-      </button>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
+    onclick="w3_open_nav('html')" id="navbtn_html">
+    HTML
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
+    onclick="w3_open_nav('css')" id="navbtn_css">
+    CSS
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
+    onclick="w3_open_nav('examples')" id="navbtn_examples">
+    JavaScript
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
+    href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises">
+    Framework
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
+    href="javascript:void(0)" onclick="w3_open_nav('tools')" id="navbtn_tools">
+    Tools
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
+    href="javascript:void(0)" onclick="w3_open_nav('technology')" id="navbtn_technology">
+    technology
+    <i class='fa fa-caret-down'></i>
+    <i class='fa fa-caret-up' style="display:none"></i>
+  </a>
+  <div class="w3-right">
+    <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" href="javascript:void(0)"
+      onclick="open_search(this)" title='Search'>
+      <i class='fa fa-search text-primary'></i>
     </a>
-
-  </div>
-</nav>
-
-
-<div class="container-fluid" style="margin-top: 20px;">
-  <div class="card shadow mb-4 bg-secondary">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4" style="margin-top: 20px;">
-          <div class="btn-group">
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                HTML
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="html">HTML</a>
-                <a class="dropdown-item" routerLink="htmltags">Basic tags</a>
-                <a class="dropdown-item" routerLink="htmlatributs">Atributs</a>
-              </div>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                CSS
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="css">CSS</a>
-              </div>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                JavaScript
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="javascript">JavaScript</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4" style="margin-top: 20px;">
-          <div class="btn-group">
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                Bootsrap
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="bootsrap">Bootsrap</a>
-              </div>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                jQuery
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="jquery">jQuery</a>
-              </div>
-            </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder"></i>
-                Angular
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="angular">Angular</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4" style="margin-top: 20px;">
-          <div class="btn-group">
-            <div class="btn-group">
-              <a routerLink="json">
-                <button type="button" class="btn btn-primary">
-                  <i class="fa fa-folder"></i>
-                  JSON
-                </button>
-              </a>
-            </div>
-            <div class="btn-group">
-              <a routerLink="ajax">
-                <button type="button" class="btn btn-primary">
-                  <i class="fa fa-folder"></i>
-                  AJAX
-                </button>
-              </a>
-            </div>
-            <div class="btn-group">
-              <a routerLink="nodejs">
-                <button type="button" class="btn btn-primary">
-                  <i class="fa fa-folder"></i>
-                  Node.js
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-    </div>
+    <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" href="javascript:void(0)"
+      onclick="open_translate(this)" title='Translate'>
+      <i class='fa fa-language text-primary'></i>
+    </a>
+    <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" routerLink="login">
+      <i class='fa fa-user text-primary'></i>
+      LOGIN
+    </a>
   </div>
 </div>
 
+
+<div id='myAccordion' class="w3-card-2 w3-light-grey w3-center w3-hide-large" style="display:none;cursor:default">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-xlarge w3-right">&times;</a><br>
+  <div class="w3-container w3-padding-32">
+
+
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('html');" href="javascript:void(0);">HTML
+      <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_html" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('css')" href="javascript:void(0);">CSS
+      <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_css" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('examples')"
+      href="javascript:void(0);">JavaScript <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_examples" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('exercises')"
+      href="javascript:void(0);">Framework <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_exercises" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('tools')" href="javascript:void(0);">Tools <i
+        class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_tools" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('technology')"
+      href="javascript:void(0);">Technology <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_technology" class="w3-white w3-show"></div>
+  </div>
+</div>
+
+<nav id="nav_html" class="w3-light-grey w3-card-2 w3-hide-small navex">
+  <span onclick="w3_close_nav('html')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+        <a class="w3-bar-item w3-button" routerLink="html">HTML Tutorials</a>
+        <a class="w3-bar-item w3-button" routerLink="htmltags">Basic tags</a>
+        <a class="w3-bar-item w3-button" routerLink="htmlatributs">Atributs</a>
+      </div>
+      <div class="col-sm-2">
+
+      </div>
+      <div class="col-sm-2">
+
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+  <br class="hidesm">
+</nav>
+
+<nav id="nav_css" class="w3-light-grey w3-card-2 w3-hide-small navex">
+  <span onclick="w3_close_nav('css')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="css">CSS</a>
+      </div>
+      <div class="col-sm-2">
+
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+  <br class="hidesm">
+</nav>
+
+<nav id="nav_examples" class="w3-light-grey w3-card-2 w3-hide-small navex">
+  <span onclick="w3_close_nav('examples')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="javascript">JavaScript</a>
+      </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+  <br class="hidesm">
+</nav>
+
+<nav id="nav_exercises" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
+  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="bootsrap">Bootsrap</a>
+        <a class="w3-bar-item w3-button" routerLink="jquery">jQuery</a>
+        <a class="w3-bar-item w3-button" routerLink="angular">Angular</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="nodejs">Node.js</a>
+        <a class="w3-bar-item w3-button" routerLink="framework">Framework</a>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+  <br class="hidesm">
+</nav>
+
+<nav id="nav_tools" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
+  <span onclick="w3_close_nav('tools')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+        <a class="w3-bar-item w3-button" routerLink="resources">Resources</a>
+        <a class="w3-bar-item w3-button" routerLink="commands">Commands</a>
+        <a class="w3-bar-item w3-button" routerLink="git">GIT</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="json">JSON</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="ajax"> AJAX</a>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+  </div>
+  <br class="hidesm">
+</nav>
+
+<nav id="nav_technology" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
+  <span onclick="w3_close_nav('technology')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+  <div class="w3-row-padding w3-bar-block">
+    <div class="row">
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
+        <a class="w3-bar-item w3-button" routerLink="resources">Resources</a>
+        <a class="w3-bar-item w3-button" routerLink="commands">Commands</a>
+        <a class="w3-bar-item w3-button" routerLink="git">GIT</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="json">JSON</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="w3-bar-item w3-button" routerLink="ajax"> AJAX</a>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+
+  </div>
+  <br class="hidesm">
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
 <!-- Body -->
 <router-outlet></router-outlet>
 
@@ -140,9 +241,46 @@
 <!-- Fouter -->
 <div class="container-fluid text-center text-white" style="background-color: rgb(65, 24, 107);">
   <img style="margin-top: 15px;" src="../assets/img/logo-black.png" alt="Tutorials">
-  <br>
-  <b class="text-success">
-    <h4>&copy; Copyright 2020. All Rights Reserved.</h4>
-  </b>
-  <br>
+  <hr class="sidebar-divider">
+  <div class="text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <b class="text-success">&copy; Copyright 2020. All Rights Reserved.</b>
+      </div>
+      <div class="col-sm-6">
+        <a href="https://github.com/jamalelkhdadi"><i class="fa fa-github s-midia"></i></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.behance.net/jamalelkhdadi"><i class="fa fa-behance s-midia"></i></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.youtube.com/channel/UCVj6YvQu1r8lMVss8i8r7Cg"><i class="fa fa-youtube s-midia"></i></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/jamal_elkhdadi?s=09"><i class="fa fa-twitter s-midia"></i></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/mwlite/in/jamalelkhdadi"><i class="fa fa-linkedin s-midia"></i></a>
+      </div>
+    </div>
+
+
+  </div>
+  <div style="margin-top: 25px;">
+    <a href="about/index.html" style="margin: 15px;"><i class="fa fa-home"></i>
+      About us
+    </a>
+    <a href="about/about_terms_of_use.html" style="margin: 15px;"><i class="fa fa-asterisk"></i>
+      Terms of use
+    </a>
+    <a href="about/about_privacy.html" style="margin: 15px;"><i class="fa fa-globe"></i>
+      Privacy Policy
+    </a>
+    <a href="about/about_cookies.html" style="margin: 15px;"><i class="fa fa-question-circle"></i>
+      Cookies Policy
+    </a>
+    <a href="about/tutorials_writing.html" style="margin: 15px;"><i class="fa fa-hands-helping"></i>
+      Write for us
+    </a>
+    <a href="about/contact_us.html" style="margin: 15px;"><i class="fa fa-map-marker-alt"></i>
+      Contact
+    </a>
+  </div>
+  <br><br>
 </div>

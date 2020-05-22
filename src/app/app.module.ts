@@ -17,12 +17,14 @@ import { Html5demoComponent } from './html/html5demo/html5demo.component';
 import { Html5referencesComponent } from './html/html5references/html5references.component';
 import { Html5toolsComponent } from './html/html5tools/html5tools.component';
 import { HomeComponent } from './home/home.component';
-import { WebsiteComponent } from './home/website/website.component';
 import { HtmltagsComponent } from './html/htmltags/htmltags.component';
 import { HtmlatributsComponent } from './html/htmlatributs/htmlatributs.component';
 import { CommandsComponent } from './commands/commands.component';
 import { JsonComponent } from './json/json.component';
 import { AjaxComponent } from './ajax/ajax.component';
+import { GitComponent } from './git/git.component';
+import { ResourcesComponent } from './home/resources/resources.component';
+import { FrameworkComponent } from './framework/framework.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +42,14 @@ import { AjaxComponent } from './ajax/ajax.component';
     Html5referencesComponent,
     Html5toolsComponent,
     HomeComponent,
-    WebsiteComponent,
     HtmltagsComponent,
     HtmlatributsComponent,
     CommandsComponent,
     JsonComponent,
     AjaxComponent,
+    GitComponent,
+    ResourcesComponent,
+    FrameworkComponent,
   ],
   imports: [
     BrowserModule,

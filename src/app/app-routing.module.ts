@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { JavascriptComponent } from './javascript/javascript.component';
@@ -9,12 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { JqueryComponent } from './jquery/jquery.component';
 import { BootsrapComponent } from './bootsrap/bootsrap.component';
 import { AngularComponent } from './angular/angular.component';
-import { WebsiteComponent } from './home/website/website.component';
+import { ResourcesComponent } from './home/resources/resources.component';
 import { HtmltagsComponent } from './html/htmltags/htmltags.component';
 import { HtmlatributsComponent } from './html/htmlatributs/htmlatributs.component';
 import { CommandsComponent } from './commands/commands.component';
 import { JsonComponent } from './json/json.component';
 import { AjaxComponent } from './ajax/ajax.component';
+import { GitComponent } from './git/git.component';
+import { FrameworkComponent } from './framework/framework.component';
 
 
 const routes: Routes = [
@@ -29,8 +32,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'website',
-    component: WebsiteComponent,
+    path: 'resources',
+    component: ResourcesComponent,
     pathMatch: 'full'
   },
   {
@@ -91,6 +94,16 @@ const routes: Routes = [
   {
     path: 'commands',
     component: CommandsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'git',
+    component: GitComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'framework',
+    component: FrameworkComponent,
     pathMatch: 'full'
   },
   {
