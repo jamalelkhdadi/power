@@ -222,7 +222,36 @@
 </nav>
 
 
+<hr>>
+<div id="" class="home1">
+  <input class="form-control mr-sm-2" type="text" ng-model="searchString" placeholder="search" />
+  <div class="container-fluid" style="margin-top: 20px;">
+    <div class="row" ng-app="instantSearch" ng-controller="InstantSearchController">
+      <div class="col-xl-3 col-md-6 mb-4" ng-repeat="i in items | searchFor:searchString">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <a class="text-dark" href="">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
 
+                  </div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <img style="width: 80px;" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
 
 
 
