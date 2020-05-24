@@ -13,7 +13,7 @@ font-size:16px;
 }
 
 /* Customize W3.CSS */
-#nav_html,#nav_css,#nav_examples,#nav_exercises,#nav_tools,#nav_technology {
+#nav_html,#nav_css,#nav_javascript,#nav_framework,#nav_tools,#nav_technology {
 display:none;
 padding-bottom:40px;
 position:absolute;

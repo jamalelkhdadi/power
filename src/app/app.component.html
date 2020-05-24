@@ -23,13 +23,13 @@
     <i class='fa fa-caret-up' style="display:none"></i>
   </a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
-    onclick="w3_open_nav('examples')" id="navbtn_examples">
+    onclick="w3_open_nav('javascript')" id="navbtn_javascript">
     JavaScript
     <i class='fa fa-caret-down'></i>
     <i class='fa fa-caret-up' style="display:none"></i>
   </a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
-    href="javascript:void(0)" onclick="w3_open_nav('exercises')" id="navbtn_exercises">
+    href="javascript:void(0)" onclick="w3_open_nav('framework')" id="navbtn_framework">
     Framework
     <i class='fa fa-caret-down'></i>
     <i class='fa fa-caret-up' style="display:none"></i>
@@ -57,7 +57,9 @@
     </a>
     <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" routerLink="login">
       <i class='fa fa-user text-primary'></i>
-      LOGIN
+    </a>
+    <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" routerLink="home">
+      <i class='fa fa-home text-primary'></i>
     </a>
   </div>
 </div>
@@ -66,20 +68,18 @@
 <div id='myAccordion' class="w3-card-2 w3-light-grey w3-center w3-hide-large" style="display:none;cursor:default">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-xlarge w3-right">&times;</a><br>
   <div class="w3-container w3-padding-32">
-
-
     <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('html');" href="javascript:void(0);">HTML
       <i class='fa fa-caret-down'></i></a>
     <div id="sectionxs_html" class="w3-white w3-show"></div>
     <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('css')" href="javascript:void(0);">CSS
       <i class='fa fa-caret-down'></i></a>
     <div id="sectionxs_css" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('examples')"
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('javascript')"
       href="javascript:void(0);">JavaScript <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_examples" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('exercises')"
+    <div id="sectionxs_javascript" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('framework')"
       href="javascript:void(0);">Framework <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_exercises" class="w3-white w3-show"></div>
+    <div id="sectionxs_framework" class="w3-white w3-show"></div>
     <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('tools')" href="javascript:void(0);">Tools <i
         class='fa fa-caret-down'></i></a>
     <div id="sectionxs_tools" class="w3-white w3-show"></div>
@@ -89,18 +89,17 @@
   </div>
 </div>
 
-<nav id="nav_html" class="w3-light-grey w3-card-2 w3-hide-small navex">
-  <span onclick="w3_close_nav('html')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
+<!--Nav html-->
+<nav id="nav_html" style="background-color: black;">
+  <span onclick="w3_close_nav('html')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
+  <div class="container w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
-        <a class="w3-bar-item w3-button" routerLink="html">HTML Tutorials</a>
-        <a class="w3-bar-item w3-button" routerLink="htmltags">Basic tags</a>
-        <a class="w3-bar-item w3-button" routerLink="htmlatributs">Atributs</a>
+        <a class="dropdown-item text-primary" routerLink="html">HTML Tutorials</a>
+        <a class="dropdown-item text-primary" routerLink="htmltags">Basic tags</a>
+        <a class="dropdown-item text-primary" routerLink="htmlatributs">Atributs</a>
       </div>
       <div class="col-sm-2">
-
       </div>
       <div class="col-sm-2">
 
@@ -112,15 +111,14 @@
   <br class="hidesm">
 </nav>
 
-<nav id="nav_css" class="w3-light-grey w3-card-2 w3-hide-small navex">
-  <span onclick="w3_close_nav('css')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
+<nav id="nav_css" style="background-color: black;">
+  <span onclick="w3_close_nav('css')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
+  <div class="container w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="css">CSS</a>
+        <a class="dropdown-item text-primary" routerLink="css">CSS</a>
       </div>
       <div class="col-sm-2">
 
@@ -132,15 +130,15 @@
   <br class="hidesm">
 </nav>
 
-<nav id="nav_examples" class="w3-light-grey w3-card-2 w3-hide-small navex">
-  <span onclick="w3_close_nav('examples')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+<nav id="nav_javascript" style="background-color: black;">
+  <span onclick="w3_close_nav('javascript')"
+    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
   <div class="w3-row-padding w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="javascript">JavaScript</a>
+        <a class="dropdown-item text-primary" routerLink="javascript">JavaScript</a>
       </div>
       <div class="col-sm-2">
       </div>
@@ -151,21 +149,21 @@
   <br class="hidesm">
 </nav>
 
-<nav id="nav_exercises" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
-  <span onclick="w3_close_nav('exercises')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+<nav id="nav_framework" style="background-color: black;">
+  <span onclick="w3_close_nav('framework')"
+    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
   <div class="w3-row-padding w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="bootsrap">Bootsrap</a>
-        <a class="w3-bar-item w3-button" routerLink="jquery">jQuery</a>
-        <a class="w3-bar-item w3-button" routerLink="angular">Angular</a>
+        <a class="dropdown-item text-primary" routerLink="bootsrap">Bootsrap</a>
+        <a class="dropdown-item text-primary" routerLink="jquery">jQuery</a>
+        <a class="dropdown-item text-primary" routerLink="angular">Angular</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="nodejs">Node.js</a>
-        <a class="w3-bar-item w3-button" routerLink="framework">Framework</a>
+        <a class="dropdown-item text-primary" routerLink="nodejs">Node.js</a>
+        <a class="dropdown-item text-primary" routerLink="framework">Framework</a>
       </div>
       <div class="col-sm-4">
       </div>
@@ -174,21 +172,21 @@
   <br class="hidesm">
 </nav>
 
-<nav id="nav_tools" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
-  <span onclick="w3_close_nav('tools')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+<nav id="nav_tools" style="background-color: black;">
+  <span onclick="w3_close_nav('tools')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
   <div class="w3-row-padding w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
-        <a class="w3-bar-item w3-button" routerLink="resources">Resources</a>
-        <a class="w3-bar-item w3-button" routerLink="commands">Commands</a>
-        <a class="w3-bar-item w3-button" routerLink="git">GIT</a>
+        <a class="dropdown-item text-primary" routerLink="home">Home</a>
+        <a class="dropdown-item text-primary" routerLink="resources">Resources</a>
+        <a class="dropdown-item text-primary" routerLink="commands">Commands</a>
+        <a class="dropdown-item text-primary" routerLink="git">GIT</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="json">JSON</a>
+        <a class="dropdown-item text-primary" routerLink="json">JSON</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="ajax"> AJAX</a>
+        <a class="dropdown-item text-primary" routerLink="ajax"> AJAX</a>
       </div>
       <div class="col-sm-4">
       </div>
@@ -197,21 +195,22 @@
   <br class="hidesm">
 </nav>
 
-<nav id="nav_technology" class="w3-light-grey w3-card-2 w3-hide-small w3-hide-medium navex">
-  <span onclick="w3_close_nav('technology')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
+<nav id="nav_technology" style="background-color: black;">
+  <span onclick="w3_close_nav('technology')"
+    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
   <div class="w3-row-padding w3-bar-block">
     <div class="row">
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="home">Home</a>
-        <a class="w3-bar-item w3-button" routerLink="resources">Resources</a>
-        <a class="w3-bar-item w3-button" routerLink="commands">Commands</a>
-        <a class="w3-bar-item w3-button" routerLink="git">GIT</a>
+        <a class="dropdown-item text-primary" routerLink="home">Home</a>
+        <a class="dropdown-item text-primary" routerLink="resources">Resources</a>
+        <a class="dropdown-item text-primary" routerLink="commands">Commands</a>
+        <a class="dropdown-item text-primary" routerLink="git">GIT</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="json">JSON</a>
+        <a class="dropdown-item text-primary" routerLink="json">JSON</a>
       </div>
       <div class="col-sm-2">
-        <a class="w3-bar-item w3-button" routerLink="ajax"> AJAX</a>
+        <a class="dropdown-item text-primary" routerLink="ajax"> AJAX</a>
       </div>
       <div class="col-sm-4">
       </div>
@@ -220,53 +219,9 @@
   </div>
   <br class="hidesm">
 </nav>
-
-
-<hr>>
-<div id="" class="home1">
-  <input class="form-control mr-sm-2" type="text" ng-model="searchString" placeholder="search" />
-  <div class="container-fluid" style="margin-top: 20px;">
-    <div class="row" ng-app="instantSearch" ng-controller="InstantSearchController">
-      <div class="col-xl-3 col-md-6 mb-4" ng-repeat="i in items | searchFor:searchString">
-        <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-            <a class="text-dark" href="">
-              <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-
-                  </div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">
-
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <img style="width: 80px;" />
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr>
-
-
-
-
-
-
-
-
-
-
 <br>
 <!-- Body -->
 <router-outlet></router-outlet>
-
-
 <!-- Fouter -->
 <div class="container-fluid text-center text-white" style="background-color: rgb(65, 24, 107);">
   <img style="margin-top: 15px;" src="../assets/img/logo-black.png" alt="Tutorials">
