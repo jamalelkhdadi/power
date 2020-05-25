@@ -5,7 +5,6 @@ import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { JqueryComponent } from './jquery/jquery.component';
 import { BootsrapComponent } from './bootsrap/bootsrap.component';
@@ -34,11 +33,6 @@ const routes: Routes = [
   {
     path: 'resources',
     component: ResourcesComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
     pathMatch: 'full'
   },
   {

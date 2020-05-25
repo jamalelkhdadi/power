@@ -7,7 +7,6 @@ import { HtmlComponent } from './html/html.component';
 import { CssComponent } from './css/css.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
 import { BootsrapComponent } from './bootsrap/bootsrap.component';
 import { JqueryComponent } from './jquery/jquery.component';
 import { AngularComponent } from './angular/angular.component';
@@ -32,7 +31,6 @@ import { FrameworkComponent } from './framework/framework.component';
     CssComponent,
     JavascriptComponent,
     PageNotFoundComponent,
-    LoginComponent,
     BootsrapComponent,
     JqueryComponent,
     AngularComponent,
