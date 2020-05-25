@@ -36,7 +36,7 @@
 
 <body style="background-color: rgb(65, 38, 38);">
 
-  <app-root id="page-top"></app-root>
+  <app-root></app-root>
 
 
   <script>
@@ -56,40 +56,6 @@
         document.getElementById("sectionxs_" + x).innerHTML = document.getElementById("nav_" + x).innerHTML;
       } else {
         document.getElementById("sectionxs_" + x).innerHTML = "";
-      }
-    }
-    function w3_open_nav(x) {
-      if (document.getElementById("nav_" + x).style.display == "block") {
-        w3_close_nav(x);
-      } else {
-        w3_close_nav("html");
-        w3_close_nav("css");
-        w3_close_nav("javascript");
-        w3_close_nav("framework");
-        w3_close_nav("tools");
-        w3_close_nav("technology");
-        document.getElementById("nav_" + x).style.display = "block";
-        if (document.getElementById("navbtn_" + x)) {
-          document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
-          document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
-        }
-
-      }
-    }
-    function w3_close_all_nav() {
-      w3_close_nav("html");
-      w3_close_nav("css");
-      w3_close_nav("javascript");
-      w3_close_nav("framework");
-      w3_close_nav("tools");
-      w3_close_nav("technology");
-      w3_close();
-    }
-    function w3_close_nav(x) {
-      document.getElementById("nav_" + x).style.display = "none";
-      if (document.getElementById("navbtn_" + x)) {
-        document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
-        document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
       }
     }
 
@@ -137,13 +103,6 @@
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
-    function clickFBLike() {
-      document.getElementById("fblikeframe").style.display = 'block';
-      document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:250px;'></iframe><br><button onclick='hideFBLike()' class='w3-button w3-dark-grey w3-hover-black'>Close</button>";
-    }
-    function hideFBLike() {
-      document.getElementById("fblikeframe").style.display = 'none';
-    }
     if (window.addEventListener) {
       document.getElementById("main").addEventListener("click", w3_close_all_nav, true);
       document.getElementById("mySidenav").addEventListener("click", w3_close_all_nav, true);
@@ -155,16 +114,10 @@
     }
 
   </script>
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
-  </a>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/googleTranslateElementInit.js"></script>
-  <script src="assets/js/main.js"></script>
   <script src="assets/js/jquery.dataTables.js"></script>
   <script src="assets/js/dataTables.bootstrap4.js"></script>
   <script src="assets/js/datatables-demo.js"></script>

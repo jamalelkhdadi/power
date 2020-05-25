@@ -5,47 +5,18 @@
 </div>
 <div
   style='display:none;position:absolute;z-index:5;right:120px;height:57px;background-color:black;text-align:right;padding-top:15px;'
-  id='google_translate_element'></div>
+  id='google_translate_element'>
+</div>
 <div class="w3-bar w3-theme w3-card-2 w3-wide notranslate">
   <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 hidesm" href="javascript:void(0)" onclick="w3_open()">
     <i class="fa fa-bars text-primary"></i>
   </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
-    onclick="w3_open_nav('html')" id="navbtn_html">
-    HTML
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
-    onclick="w3_open_nav('css')" id="navbtn_css">
-    CSS
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" href="javascript:void(0)"
-    onclick="w3_open_nav('javascript')" id="navbtn_javascript">
-    JavaScript
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
-    href="javascript:void(0)" onclick="w3_open_nav('framework')" id="navbtn_framework">
-    Framework
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
-    href="javascript:void(0)" onclick="w3_open_nav('tools')" id="navbtn_tools">
-    Tools
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-hide-medium w3-hide-small"
-    href="javascript:void(0)" onclick="w3_open_nav('technology')" id="navbtn_technology">
-    technology
-    <i class='fa fa-caret-down'></i>
-    <i class='fa fa-caret-up' style="display:none"></i>
-  </a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="home">Home</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="nodejs">Node.js</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="commands">Commands</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="git">GIT</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="json">JSON</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="ajax"> AJAX</a>
   <div class="w3-right">
     <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" href="javascript:void(0)"
       onclick="open_search(this)" title='Search'>
@@ -64,166 +35,136 @@
   </div>
 </div>
 
-
 <div id='myAccordion' class="w3-card-2 w3-light-grey w3-center w3-hide-large" style="display:none;cursor:default">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-xlarge w3-right">&times;</a><br>
   <div class="w3-container w3-padding-32">
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('html');" href="javascript:void(0);">HTML
-      <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_html" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('css')" href="javascript:void(0);">CSS
-      <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_css" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('javascript')"
-      href="javascript:void(0);">JavaScript <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_javascript" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('framework')"
-      href="javascript:void(0);">Framework <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_framework" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('tools')" href="javascript:void(0);">Tools <i
-        class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_tools" class="w3-white w3-show"></div>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="open_xs_menu('technology')"
-      href="javascript:void(0);">Technology <i class='fa fa-caret-down'></i></a>
-    <div id="sectionxs_technology" class="w3-white w3-show"></div>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="home">Home</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="commands">Commands</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="git">GIT</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="nodejs">Node.js</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="json">JSON</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="ajax">AJAX</a>
+    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="resources">Resources</a>
   </div>
 </div>
 
-<!--Nav html-->
-<nav id="nav_html" style="background-color: black;">
-  <span onclick="w3_close_nav('html')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="container w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="html">HTML Tutorials</a>
-        <a class="dropdown-item text-primary" routerLink="htmltags">Basic tags</a>
-        <a class="dropdown-item text-primary" routerLink="htmlatributs">Atributs</a>
+<div id="wrapper">
+  <ul class="navbar-nav text-white sidebar" style="background-color:rgb(65, 24, 107);" id="accordionSidebar">
+    <br>
+    <a class="nav-link text-center" href="index.html">
+      <img class="img-fluid" style="width: 170px;" src="assets/img/logo.png" />
+    </a>
+    <b class="text-success display-5 text-center">POWER</b>
+    <br>
+    <hr class="sidebar-divider">
+    <div class="sidebar-heading">
+      Web Application
+    </div>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#html" aria-expanded="true"
+        aria-controls="collapseTwo">
+        <i class="fa fa-folder"></i>
+        <span>HTML</span>
+      </a>
+      <div id="html" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
+          <a class="collapse-item" routerLink="htmltags">Basic tags</a>
+          <a class="collapse-item" routerLink="htmlatributs">Atributs</a>
+          <a class="collapse-item" routerLink="html">HTML Tutorials</a>
+          <a class="collapse-item" href="learn/html/htmlreferences.html">HTML references</a>
+          <a class="collapse-item" href="learn/html/html5tutorial.html">HTML5 tutorial</a>
+          <a class="collapse-item" href="learn/html/html5demo.html">HTML5 demo</a>
+          <a class="collapse-item" href="learn/html/html5tools.html">HTML5 tools</a>
+          <a class="collapse-item" href="learn/html/html5references.html">HTML5 references</a>
+        </div>
       </div>
-      <div class="col-sm-2">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#css" aria-expanded="true"
+        aria-controls="collapseUtilities">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>CSS</span>
+      </a>
+      <div id="css" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
+          <a class="collapse-item" routerLink="css">CSS tutorial</a>
+        </div>
       </div>
-      <div class="col-sm-2">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#javascript" aria-expanded="true"
+        aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>JavaScript</span>
+      </a>
+      <div id="javascript" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
+          <a class="collapse-item" routerLink="javascript">JavaScript</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#bootsrap" aria-expanded="true"
+        aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Framework</span>
+      </a>
+      <div id="bootsrap" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
+          <a class="collapse-item" routerLink="framework">Framework</a>
+          <a class="collapse-item" routerLink="bootsrap">Bootsrap</a>
+          <a class="collapse-item" routerLink="jquery">jQuery</a>
+          <a class="collapse-item" routerLink="angular">Angular</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#jquery" aria-expanded="true"
+        aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Tools</span>
+      </a>
+      <div id="jquery" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#angular" aria-expanded="true"
+        aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Technology</span>
+      </a>
+      <div id="angular" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h5 class="collapse-header">Tutorials :</h5>
 
+        </div>
       </div>
-      <div class="col-sm-4">
+    </li>
+    <hr class="sidebar-divider">
+  </ul>
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+      <div class="container-fluid">
+        <!-- Body -->
+        <br>
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-  <br class="hidesm">
-</nav>
-
-<nav id="nav_css" style="background-color: black;">
-  <span onclick="w3_close_nav('css')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="container w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="css">CSS</a>
-      </div>
-      <div class="col-sm-2">
-
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
-  </div>
-  <br class="hidesm">
-</nav>
-
-<nav id="nav_javascript" style="background-color: black;">
-  <span onclick="w3_close_nav('javascript')"
-    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="javascript">JavaScript</a>
-      </div>
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
-  </div>
-  <br class="hidesm">
-</nav>
-
-<nav id="nav_framework" style="background-color: black;">
-  <span onclick="w3_close_nav('framework')"
-    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="bootsrap">Bootsrap</a>
-        <a class="dropdown-item text-primary" routerLink="jquery">jQuery</a>
-        <a class="dropdown-item text-primary" routerLink="angular">Angular</a>
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="nodejs">Node.js</a>
-        <a class="dropdown-item text-primary" routerLink="framework">Framework</a>
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
-  </div>
-  <br class="hidesm">
-</nav>
-
-<nav id="nav_tools" style="background-color: black;">
-  <span onclick="w3_close_nav('tools')" class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="home">Home</a>
-        <a class="dropdown-item text-primary" routerLink="resources">Resources</a>
-        <a class="dropdown-item text-primary" routerLink="commands">Commands</a>
-        <a class="dropdown-item text-primary" routerLink="git">GIT</a>
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="json">JSON</a>
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="ajax"> AJAX</a>
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
-  </div>
-  <br class="hidesm">
-</nav>
-
-<nav id="nav_technology" style="background-color: black;">
-  <span onclick="w3_close_nav('technology')"
-    class="text-primary w3-button w3-xlarge w3-display-topright">&times;</span><br>
-  <div class="w3-row-padding w3-bar-block">
-    <div class="row">
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="home">Home</a>
-        <a class="dropdown-item text-primary" routerLink="resources">Resources</a>
-        <a class="dropdown-item text-primary" routerLink="commands">Commands</a>
-        <a class="dropdown-item text-primary" routerLink="git">GIT</a>
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="json">JSON</a>
-      </div>
-      <div class="col-sm-2">
-        <a class="dropdown-item text-primary" routerLink="ajax"> AJAX</a>
-      </div>
-      <div class="col-sm-4">
-      </div>
-    </div>
-
-  </div>
-  <br class="hidesm">
-</nav>
-<br>
-<!-- Body -->
-<router-outlet></router-outlet>
+</div>
 <!-- Fouter -->
-<div class="container-fluid text-center text-white" style="background-color: rgb(65, 24, 107);">
+<div class="container-fluid text-center text-white" style="background-color: black;">
   <img style="margin-top: 15px;" src="../assets/img/logo-black.png" alt="Tutorials">
   <hr class="sidebar-divider">
   <div class="text-center">
@@ -243,8 +184,6 @@
         <a href="https://www.linkedin.com/mwlite/in/jamalelkhdadi"><i class="fa fa-linkedin s-midia"></i></a>
       </div>
     </div>
-
-
   </div>
   <div style="margin-top: 25px;">
     <a href="about/index.html" style="margin: 15px;"><i class="fa fa-home"></i>
