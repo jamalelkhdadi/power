@@ -17,6 +17,9 @@ import { JsonComponent } from './json/json.component';
 import { AjaxComponent } from './ajax/ajax.component';
 import { GitComponent } from './git/git.component';
 import { FrameworkComponent } from './framework/framework.component';
+import { GithubComponent } from './github/github.component';
+import { DevopsComponent } from './devops/devops.component';
+import { ShellComponent } from './shell/shell.component';
 
 
 const routes: Routes = [
@@ -93,6 +96,21 @@ const routes: Routes = [
   {
     path: 'git',
     component: GitComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'shell',
+    component: ShellComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'github',
+    component: GithubComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'devops',
+    component: DevopsComponent,
     pathMatch: 'full'
   },
   {

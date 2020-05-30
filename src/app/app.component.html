@@ -12,11 +12,11 @@
     <i class="fa fa-bars text-primary"></i>
   </a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="home">Home</a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="nodejs">Node.js</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="github">Github</a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="commands">Commands</a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="git">GIT</a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="json">JSON</a>
-  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="ajax"> AJAX</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="devops">DevOps</a>
+  <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="shell">Shell</a>
   <a class="w3-bar-item w3-button barex w3-hover-white w3-padding-16" routerLink="resources">Resources</a>
   <div class="w3-right">
     <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" href="javascript:void(0)"
@@ -29,7 +29,7 @@
     </a>
     <!-- Trigger the modal with a button -->
     <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" id="myBtn">
-      <i class='fa fa-user text-primary'></i> login
+      <i class='fa fa-user text-primary'></i>
     </a>
     <a class="w3-bar-item w3-button w3-hover-white w3-padding-16 w3-right" routerLink="home">
       <i class='fa fa-home text-primary'></i>
@@ -44,8 +44,6 @@
     <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="commands">Commands</a>
     <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="git">GIT</a>
     <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="nodejs">Node.js</a>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="json">JSON</a>
-    <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="ajax">AJAX</a>
     <a class="w3-button w3-block w3-large w3-wide" onclick="w3_close()" routerLink="resources">Resources</a>
   </div>
 </div>
@@ -145,7 +143,8 @@
       <div id="angular" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h5 class="collapse-header">Tutorials :</h5>
-
+          <a class="collapse-item" onclick="w3_close()" routerLink="json">JSON</a>
+          <a class="collapse-item" onclick="w3_close()" routerLink="ajax">AJAX</a>
         </div>
       </div>
     </li>

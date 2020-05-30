@@ -1,0 +1,511 @@
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <header class="card-header py-3">
+            <h1 class="m-0 font-weight-bold text-primary text-center"><b>GitHub - </b>Professional Guides</h1>
+        </header>
+        <article class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <section>
+                        <h1>Continuous Integration Continuous Delivery</h1>
+                        <div>
+                            <br> When multiple developers work on the same project,
+                            <br> they'll usually be changing a shared master development branch
+                            <br> at overlapping intervals.
+                            <br> This overlap occurs because developers create parallel branches for work,
+                            <br> and then merge those branches in when features are complete.
+                            <br> The branches they create for their work all start off
+                            <br> as identical copies of the master branch,
+                            <br> but as the master branch changes over time,
+                            <br> the code on an unmerged branch looks less and less
+                            <br> like the current code on master.
+                            <br> When it's time to integrate their changes into the main codebase,
+                            <br> this inevitable divergence can cause lots of challenges
+                            <br> that can introduce bugs, create bottlenecks,
+                            <br> or even bring development to a complete halt.
+                            <br> Continuous integration, or CI, is a workflow strategy that helps ensure
+                            <br> everyone's changes will integrate with the current version of the project.
+                            <br> This lets you catch bugs, reduce merge conflicts,
+                            <br> and have confidence your software is working.
+                            <br> While the details may vary depending on your development environment,
+                            <br> most CI systems feature the same basic tools and processes.
+                            <br> In most scenarios, a team will practice CI
+                            <br> in conjunction with automated testing
+                            <br> using a dedicated server or CI service.
+                            <br> Whenever a developer adds new work to a branch,
+                            <br> the server will automatically build and test the code
+                            <br> to determine whether it works
+                            <br> and can be integrated with the code on the main development branch.
+                            <br> The CI server will produce output containing the results of the build
+                            <br> and an indication of whether or not the branch passes all the requirements
+                            <br> for integration into the main development branch.
+                            <br> By exposing build and test information for every commit on every branch,
+                            <br> CI paves the way for what's known as continuous delivery, or CD,
+                            <br> as well as a related process called continuous deployment.
+                            <br> So, what's the difference between continuous delivery
+                            <br> and continuous deployment?
+                            <br> Continuous delivery is the practice of developing software in such a way
+                            <br> that you could release it at any time.
+                            <br> When coupled with CI,
+                            <br> continuous delivery lets you develop features with modular code
+                            <br> in more manageable increments.
+                            <br> Continuous deployment is an extension of continuous delivery.
+                            <br> It's a process that allows you to actually deploy
+                            <br> newly developed features into production with confidence,
+                            <br> and experience little, if any, downtime.
+                            <br> Now, let's take a look at how GitHub fits into this process.
+                            <br> We'll take in one step at a time, starting with CI.
+                            <br> GitHub is like a clearinghouse for your code.
+                            <br> Developers make changes locally, and push those changes to GitHub
+                            <br> when they want to share them with others.
+                            <br> With CI, all of these changes need to get to the CI server
+                            <br> so it can determine whether or not they will integrate
+                            <br> with the current main development branch.
+                            <br> But how does it even know about them?
+                            <br> GitHub uses what are called webhooks
+                            <br> to send messages to external systems
+                            <br> about activity and events that occur in your projects.
+                            <br> For each event type you can specify the subscribers
+                            <br> who should receive the message about the event.
+                            <br> In this case, we can subscribe our CI server to receive a message
+                            <br> anytime someone pushes code to a branch
+                            <br> or opens a pull request on GitHub.
+                            <br> The CI server will parse the message from GitHub,
+                            <br> grab the current copy of the project, build the branch, and run the tests.
+                            <br> When the CI server finishes its processes for the current commit,
+                            <br> it sends a message to GitHub Status API
+                            <br> containing status information about the commit.
+                            <br> GitHub uses that message to display information about the commit
+                            <br> and can even link back
+                            <br> to more detailed information on the CI server.
+                            <br> This helps give you a clearer idea of which changes can be integrated
+                            <br> into the main development branch, and which ones need a bit more work.
+                            <br> Continuous deployment works in a similar way.
+                            <br> You can often configure your CI server
+                            <br> to deploy branches as part of its processes.
+                            <br> In a simple setup,
+                            <br> anytime the master branch receives a new commit,
+                            <br> the CI provider grabs a current copy of the project,
+                            <br> and deploys the master branch to production.
+                            <br> The setup for this type of deployment will vary depending on your provider.
+                            <br> If your project requires more flexibility,
+                            <br> GitHub also exposes a Deployments API
+                            <br> that lets you create custom deployments from branches, tags, or commits.
+                            <br> You can use the Deployments API in conjunction with webhooks
+                            <br> to automatically notify third-party systems,
+                            <br> which can then retrieve a copy of the code from GitHub
+                            <br> and deploy the version you request to the environment you specify.
+                            <br> So, let's review all of that one more time.
+                            <br> Continuous integration is a workflow strategy you can lean on
+                            <br> to help you ensure new code will integrate
+                            <br> into the current version of the software.
+                            <br> Continuous delivery is developing software that could be released at any time.
+                            <br> GitHub puts your code at the center of your development ecosystem
+                            <br> by serving as a clearinghouse that not only keeps track of changes,
+                            <br> but also communicates with other systems about those changes
+                            <br> using webhooks and APIs.
+                            <br> To get started setting up CI, CD,
+                            <br> or integrating GitHub with the tools you love,
+                            <br> visit github.com/business to learn more.
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Workflow Strategies</h1>
+                        <div>
+                            <br> Managing change can be challenging, especially for software development.
+                            <br> It's an elaborate process,
+                            <br> where lots of people are using many complex tools,
+                            <br> in parallel, to build one thing.
+                            <br> Workflow is about controlling
+                            <br> the sequence of events that transform a piece of work
+                            <br> to ensure every person* can use the best tool at the right time.
+                            <br> At its core, workflow is change management.
+                            <br> There is no universal solution for every team's needs,
+                            <br> but a good workflow positions
+                            <br> all of the tools, processes, and people, for optimum happiness and productivity.
+                            <br> Rather than presenting a prescriptive set of features
+                            <br> or family of products with a predetermined flow,
+                            <br> Github gives you the flexibility to define the best workflow for you.
+                            <br> It puts your code at the center of your development process
+                            <br> and provides sensible tools
+                            <br> for managing changes to your software and getting it where it needs to go.
+                            <br> Let's take a look at some of the ways Github lets you define your workflow.
+                            <br> Branching is a core part of managing parallel software development.
+                            <br> Git, the version control system Github is built for--
+                            <br> lets you create, destroy, and combine branches with minimal effort.
+                            <br> So, branches can exist for as long, or as short, as you need.
+                            <br> One of the most straightforward branching workflows is the Github Flow.
+                            <br> In this workflow, your project has a singular master branch,
+                            <br> where all released work lives.
+                            <br> And you can create temporary feature branches
+                            <br> where new development takes place.
+                            <br> When changes are ready for review,
+                            <br> you open a pull request to review and discuss them.
+                            <br> We'll talk more about pull requests in just a second.
+                            <br> When changes are approved, you can deploy your code
+                            <br> from your feature branch to production, if you need to.
+                            <br> Then, you just merge the feature branch into the master branch, and delete it.
+                            <br> Let's talk a bit more about pull requests.
+                            <br> On Github, pull requests let you show others
+                            <br> the changes you've made on one branch,
+                            <br> so they can review and discuss them before merging them into another branch.
+                            <br> You can also integrate with other systems
+                            <br> and have Github report additional information
+                            <br> about things like build results, test coverage, and deployment status.
+                            <br> Team members can use this information
+                            <br> to discuss the code and submit reviews that approve it,
+                            <br> or request changes that need to be addressed before merging.
+                            <br> Whether you approve the changes, or ultimately decide not to merge,
+                            <br> the pull request remains intact on Github for future reference,
+                            <br> as a unified record of the decision-making process,
+                            <br> around that set of changes.
+                            <br> Github's flexibility supports workflows with more complex branching needs, too.
+                            <br> One example of a more robust branching strategy is the Git Flow.
+                            <br> Git Flow relies on long-lived branches for simultaneously developing new features
+                            <br> while supporting current releases.
+                            <br> In the Git Flow, you have two primary branches: master and develop.
+                            <br> The master branch will always reflect the most current
+                            <br> production-ready state of the software, while the develop branch reflects
+                            <br> the latest development for the next release.
+                            <br> You also have supporting branches that each have specific purposes.
+                            <br> Feature branches work like feature branches in the Github Flow.
+                            <br> Release branches help you prepare the work on develop,
+                            <br> that will be included in the next release version.
+                            <br>And hotfix branches
+                            <br>let you make critical changes to the master branch,
+                            <br>without impeding work on develop or the next release.
+                            <br>Let's walk through a typical workflow with the Git Flow.
+                            <br>Developers create feature branches off of the develop branch
+                            <br>and merge them back into develop when features are ready.
+                            <br>When it is time to create a new production release,
+                            <br>you'll make a decision about which new features
+                            <br>will be included in it.
+                            <br>At that point in the develop branch, you start a release branch.
+                            <br>This allows work to continue on develop without disrupting
+                            <br>the preparations for releasing the new features to production.
+                            <br>You may find that there are a few bugs to fix before releasing.
+                            <br>It's okay to add that work to the release branch,
+                            <br>but it's best to avoid adding new big features
+                            <br>to an existing release branch.
+                            <br>Instead, save them for a future release.
+                            <br>When the release is ready, you merge the release branch
+                            <br>into master and tag it with a version number.
+                            <br>Github recognizes tags in your project
+                            <br>and lets you easily create releases from them.
+                            <br>Now, all of the work that you merged into develop, prior to the release branch,
+                            <br>is available in production as part of the newest release.
+                            <br>You can safely merge any bug fixes from the release branch back into develop.
+                            <br>And then, delete the release branch.
+                            <br>Suppose a critical bug arises in production.
+                            <br>You can create a hotfix branch off of master to address the bug immediately,
+                            <br>while planned work continues on develop.
+                            <br>When the bug is fixed, you can merge the hotfix branch into master,
+                            <br>tag the work, and create a new release.
+                            <br>You'll also want to merge the hotfix branch
+                            <br>back into develop, or to the next release branch,
+                            <br>if one currently exists.
+                            <br>Let's review that one more time.
+                            <br>In software development branching
+                            <br>kind of forms the skeleton of your workflow.
+                            <br>It could be minimal and straightforward, highly-complex, or everything in-between.
+                            <br>Regardless of your approach, Github remains flexible for you.
+                            <br>Modular workflow features like pull requests and integrations
+                            <br>with your preferred external systems help you power a workflow,
+                            <br>where everyone can use the best tools exactly when they need it.
+                            <br>For help crafting a plan
+                            <br>that puts Github at the center of your development workflow
+                            <br>visit github.com/business to learn more.
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Managing Projects</h1>
+                        <div>
+                            <br>Software development is filled with specialized tools and processes.
+                            <br>But managing software development is a unique job.
+                            <br>And it's as much about people as it is about processes.
+                            <br>Taking in a broad view of the project to understand how all of the pieces connect,
+                            <br>and contribute to bigger objectives,
+                            <br>requires a more nuanced set of skills for things like:
+                            <br>Planning work.
+                            <br>Identifying and removing obstacles.
+                            <br>And ensuring effective communication.
+                            <br>GitHub provides approachable tools,
+                            <br>that help you craft plans, prioritize work, and monitor progress.
+                            <br>So you can keep your efforts focused on people,
+                            <br>instead of problems.
+                            <br>Issues on GitHub are discussion threads,
+                            <br>where you can report bugs, discuss tasks, or even propose ideas.
+                            <br>They're designed with flexibility in mind.
+                            <br>With straight forward features that are always nearby,
+                            <br>without cluttering your view.
+                            <br>They offer things like Task Lists, to subdivide work.
+                            <br>As well as drag-and-drop support for images and file attachments.
+                            <br>If a particular person or people are responsible for an issue,
+                            <br>you can assign it to them.
+                            <br>You can apply custom labels to an Issue,
+                            <br>to categorize it by priority, feature, or whatever additional context you need.
+                            <br>In addition to the discussion happening in the Issue,
+                            <br>GitHub also tracks changes you make to the Issue itself.
+                            <br>Creating a lasting record of the decision making process,
+                            <br>around a topic for historical reference.
+                            <br>Pull Requests are similar to Issues,
+                            <br>but because they're attached to a set of proposed changes,
+                            <br>they also include their own set of tools for reviewing those changes,
+                            <br>and making decisions about them.
+                            <br>Milestones let you group related Issues and Pull Requests,
+                            <br>together around a shared goal or deadline.
+                            <br>Like a planned release, or a major feature.
+                            <br>As the Issues and Pull Requests associated with a Milestone close,
+                            <br>GitHub reports the progress toward the Milestone.
+                            <br>GitHub helps you keep comprehensive records as your project changes.
+                            <br>But it also helps you find and focus on the right information when you need it.
+                            <br>You can filter and sort Issues and Pull Requests by pertinent Metadata.
+                            <br>Like a Signee, for instance.
+                            <br>For pinpointing specific discussions,
+                            <br>you can search Issues and Pull Requests using qualifiers,
+                            <br>that help narrow your search to specific criteria.
+                            <br>The sorting, filters, and search terms you apply also form a unique URL,
+                            <br>which makes it easy to share a particular view with others, as a simple link.
+                            <br>If you need to visualize more of a process,
+                            <br>Projects let you arrange Issues and Pull Requests,
+                            <br>using Boards to create customized workflows that suit your needs.
+                            <br>You can use Boards for things like prioritizing work,
+                            <br>tracking release checklists, or even building comprehensive road maps.
+                            <br>You can also add quick notes to projects,
+                            <br>and convert those notes to Issues when you're ready.
+                            <br>GitHub also exposes a project's API,
+                            <br>that allows external tools to automate and report on your Issues and Pull Requests.
+                            <br>Giving you more insight into the data you're generating,
+                            <br>just by managing your projects on GitHub.
+                            <br>So let's take a look at all of that,
+                            <br>one more time.
+                            <br>Issues and Pull Requests serve as records,
+                            <br>that document all of the work that happens on your project.
+                            <br>To categorize, prioritize, and manage that work,
+                            <br>GitHub gives you a set of flexible tools, like Labels, Milestones, and Projects.
+                            <br>As well as robust API's, which let you craft a workflow that suits your needs.
+                            <br>If you want to get a better idea of how GitHub fits,
+                            <br>into your current Project Management workflow,
+                            <br>visit github.com/business to learn more.
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    <section>
+                        <h1>Quality Control</h1>
+                        <div>
+                            Ensuring quality is an essential part of software development.
+                            It helps you spot bugs, meet requirements,
+                            and craft consistent code.
+                            GitHub gives you the flexibility to interweave
+                            quality control at every step,
+                            with tools to ensure code meets your standards,
+                            as it comes in, while it's being worked on,
+                            and before it goes out.
+                            Pre-receive hooks are customizable lightweight scripts
+                            that allow you to perform quality checks
+                            on any code pushed to GitHub Enterprise.
+                            Once a site administrator sets up these scripts,
+                            owners of organizations and repositories
+                            can choose which ones they want to apply.
+                            These scripts run against your commits in an isolated environment
+                            to ensure the code never reaches a repository on GitHub.
+                            You can use pre-received hooks to satisfy business rules,
+                            enforce regulatory compliance, or prevent common mistakes.
+                            GitHub Enterprise has a default environment
+                            with common command line tools.
+                            But you can also create your own custom environment
+                            if you have more specialized requirements.
+                            Statuses allow you to display quality information
+                            about every commit pushed to GitHub.
+                            When you integrate GitHub with your other QA tools,
+                            statuses can tell you if a build was successful,
+                            if it passed unit tests, or other requirements that you specify.
+                            The details of setting up statuses vary depending on your preferred tools,
+                            but the basic principles are the same.
+                            When you push a commit, GitHub contacts your external system,
+                            which then requests a copy of the new code.
+                            It processes the code and sends a message back to GitHub status API
+                            with information about the status of the commit.
+                            Statuses help provide additional context during code review.
+                            As you discuss proposed changes, the status data from the external systems
+                            provides additional relevant information
+                            to help you conduct an informed review,
+                            so you can have confidence approving the pull request,
+                            or provide direction when requesting changes.
+                            Protected branches are a tool you can use
+                            to ensure code doesn't ship until it's ready.
+                            If you use protected branches in conjunction with status checks,
+                            you can require code to pass specific checks
+                            before GitHub allows it to be merged.
+                            You can also ensure proposed code contains the latest changes
+                            from the protected branch, giving you more confidence
+                            in the results of those status checks.
+                            So let's review that one more time.
+                            Pre-receive hooks check work on its way up to GitHub.
+                            Code reviews and statuses let you combine input from people and systems
+                            to make informed decisions when reviewing proposed changes.
+                            Protected branches act as an additional safeguard
+                            to prevent bad code from going out the door.
+                            Incremental measures woven into each step of your workflow
+                            helps you maintain software quality without sacrificing productivity.
+                            Find out how to put these QA practices into motion on GitHub
+                            by visiting github.com/business to learn more.
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Getting Insight Into Work</h1>
+                        <div>
+                            Managing software development is all about empowering people.
+                            This involves taking in a broader view of the work happening in a project
+                            to understand what is happening and why
+                            so you help developers build great software together.
+                            GitHub has tools that give you insight into patterns and activity in a project,
+                            helping you ask better questions about processes,
+                            and take action to help developers work better together.
+                            The Pulse tab in a repository is a good place to start
+                            when you need an overview of what kind of discussion
+                            is happening in a project.
+                            By adjusting the time period, you can see where work
+                            tends to percolate in your project.
+                            The relationships between these numbers can support assumptions
+                            about your productivity level, or be an indication of workflow issues
+                            you may want to address.
+                            For instance, a project with a high ratio of opened pull requests to merged ones
+                            could suggest a bottleneck with the review process
+                            that you would want to address.
+                            The Pulse tab also provides a list of the issues and pull requests
+                            contributing to its numbers.
+                            This list is a great place to start looking for problems or patterns
+                            among related pieces of work.
+                            Branch Data on GitHub can help you find out where work in progress
+                            currently stands and spot potential conflicts
+                            before they become burdensome.
+                            The Branch listing shows you which branches in a project
+                            are active and which have gone stale.
+                            This is a quick way to identify and revisit work that has been forgotten
+                            or maybe abandoned due to obstacles.
+                            This list also lets you see how far a branch has diverged
+                            from the master branch.
+                            For instance, a branch that is several hundred commits
+                            behind the master branch might be missing crucial new code
+                            that could cause messy merge conflicts.
+                            On the other hand, if a branch is several hundred commits ahead
+                            of the master branch, this means you could be facing
+                            a time consuming code review process.
+                            You can also see which branches don't have associated pull requests yet.
+                            In cases where these branches have accumulated work,
+                            it's helpful to reach out to the authors of this work and encourage them
+                            to start a conversation about the changes by opening pull requests.
+                            If you integrate with external systems who send statuses back to GitHub,
+                            you can also see a branch's current status here as well.
+                            For more detailed metadata about the work happening in your project,
+                            the Graphs tab gives you multiple ways to visualize activity.
+                            The Contributors view helps you see for any time period
+                            in the life of your project who was responsible for what amount of work.
+                            For example, if there was a large spike in activity, you can see who contributed
+                            to it and what they did.
+                            The Commits view displays a week by week tally of new commits to your project.
+                            Scrolling through these totals shows you a day by day breakdown
+                            of when those commits happened.
+                            This can help you identify things like the most productive points
+                            of the year for your team, or even the most productive days
+                            of the week.
+                            The Code Frequency view shows you a graph
+                            of additions and deletions per week for the lifetime of your project.
+                            This can be helpful for identifying when large amounts of code
+                            were added to or removed from a project.
+                            The Punch Card view shows an hour by hour breakdown
+                            of commits for each day of the week.
+                            This helps you see which times of the day and which days of the week
+                            are the most productive for people.
+                            But it can also help you locate productivity blockers.
+                            For instance, well, let's say you notice a four hour drop in productivity
+                            on Tuesdays.
+                            When you look into it, you may find that this coincides
+                            with the weekly team meeting where unnecessary action items
+                            prevent developers from working on code.
+                            The Network view shows you a graph of all your repositories' branches,
+                            as well as branches on forks that contain commits unique to them.
+                            If you use the fork and pull contribution model,
+                            where contributions originate on a fork of the repository,
+                            rather than a branch inside it, this graph helps you identify
+                            forks containing work that you might be waiting for.
+                            You can reach out to the owners of these forks and encourage them
+                            to open pull requests for their work.
+                            So, let's review that one more time.
+                            Your project's Pulse is a high level overview of its throughput.
+                            Graphs and Branch Information present activity through different lenses,
+                            letting you focus on data in the right context.
+                            Rather than simply reporting stats, GitHub keeps the focus on developers
+                            by giving you insight tools that help you ask the right questions,
+                            have conversations, and take thoughtful action.
+                            Find out how you can use GitHub to get more insight
+                            into your team's work by visiting github.com/business to learn more.
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Finding What You Need</h1>
+                        <div>
+                            GitHub gives you room to spread your development out
+                            across as many repositories and organizations as you need.
+                            That abundance of information can seem overwhelming
+                            when you need to find something.
+                            Luckily, as you're collaborating behind the scenes
+                            GitHub is indexing your code, documentation, and conversations.
+                            So they can be found later.
+                            Let's take a look at a couple of the powerful search tools
+                            that help you find exactly what you need.
+                            To find a particular file in a repository
+                            the File Finder performs an instant search of the file names
+                            in a repository.
+                            It also uses fuzzy matching.
+                            So, if you're not sure of an exact name, you can type a few characters
+                            and GitHub will return the most similar results.
+                            This is a great option when you need to find related files
+                            that live in separate directories
+                            such as the code for a Beecher and its associated tasks.
+                            GitHub keeps a searchable index of all the content and code
+                            from every repository's default branch.
+                            Having access to all of the code your team writes
+                            not only helps reduce duplicated work
+                            it can also be a powerful resource for sharing knowledge
+                            across an organization.
+                            Let's say you were working on a new feature
+                            that needs a dependency you've never used.
+                            With a simple search
+                            any projects referencing that dependency will show up in the results
+                            allowing you to find not only the projects that use it
+                            but also any relevant discussions, Wikis, or Commit messages.
+                            And since the search includes content
+                            from any repository you have read access to
+                            looking through the results
+                            may give you an even greater context into how it can be used.
+                            If you want to focus your search even more
+                            you can use the Advanced search fields to craft a more specific query.
+                            Combining search qualifiers can be a big help
+                            if you need to find a particular type of file
+                            from a certain date range relating to a specific feature.
+                            Performing an Advanced search generates a reusable URL
+                            allowing you to even bookmark or share common searches.
+                            The same search query can be performed programmatically using the search API.
+                            Used this way, the search results are returned as a JSON object
+                            allowing you to use this data in your own applications.
+                            So, let's review that one more time.
+                            You're team's collective efforts
+                            produce an abundance of code, documentation and even conversations
+                            in issues and pull requests.
+                            GitHub gives you tools to search through that information
+                            so you can find exactly what you need and act on it.
+                            That might mean reusing code, pinpointing a particular function
+                            or digging for that deployment configuration file
+                            someone mentioned a few weeks back.
+                            To find out how you can make the most of your team's efforts
+                            visit github.com/business to learn more.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>

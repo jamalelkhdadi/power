@@ -24,6 +24,9 @@ import { AjaxComponent } from './ajax/ajax.component';
 import { GitComponent } from './git/git.component';
 import { ResourcesComponent } from './home/resources/resources.component';
 import { FrameworkComponent } from './framework/framework.component';
+import { GithubComponent } from './github/github.component';
+import { DevopsComponent } from './devops/devops.component';
+import { ShellComponent } from './shell/shell.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +51,9 @@ import { FrameworkComponent } from './framework/framework.component';
     GitComponent,
     ResourcesComponent,
     FrameworkComponent,
+    GithubComponent,
+    DevopsComponent,
+    ShellComponent,
   ],
   imports: [
     BrowserModule,

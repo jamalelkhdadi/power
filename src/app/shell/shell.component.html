@@ -1,0 +1,226 @@
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h1 class="m-0 font-weight-bold text-primary text-center">Shell Scripting</h1>
+        </div>
+        <div class="card-body">
+
+
+            <br>sudo apt-get update
+
+            <br>echo 'installing curl'
+            <br>sudo apt install curl -y
+
+            <br>echo 'installing git'
+            <br>sudo apt install git -y
+
+            <br>echo "What name do you want to use in GIT user.name?"
+            <br>echo "For example, mine will be \"Erick Wendel\""
+            <br>read git_config_user_name
+            <br>git config --global user.name "$git_config_user_name"
+            <br>clear
+
+            <br>echo "What email do you want to use in GIT user.email?"
+            <br>echo "For example, mine will be \"erick.workspace@gmail.com\""
+            <br>read git_config_user_email
+            <br>git config --global user.email $git_config_user_email
+            <br>clear
+
+            <br>echo "Can I set VIM as your default GIT editor for you? (y/n)"
+            <br>read git_core_editor_to_vim
+            <br>if echo "$git_core_editor_to_vim" | grep -iq "^y" ;then
+            <br>git config --global core.editor vim
+            <br>else
+            <br>echo "Okay, no problem. :) Let's move on!"
+            <br>fi
+
+            <br>echo "Generating a SSH Key"
+            <br>ssh-keygen -t rsa -b 4096 -C $git_config_user_email
+            <br>ssh-add ~/.ssh/id_rsa
+            <br>cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+
+            <br>echo 'enabling workspaces for both screens'
+            <br>gsettings set org.gnome.mutter workspaces-only-on-primary false
+
+            <br>echo 'installing zsh'
+            <br>sudo apt-get install zsh -y
+            <br>sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+            <br>chsh -s /bin/zsh
+
+            <br>echo 'installing tool to handle clipboard via CLI'
+            <br>sudo apt-get install xclip -y
+
+            <br>export alias pbcopy='xclip -selection clipboard'
+            <br>export alias pbpaste='xclip -selection clipboard -o'
+            <br>source ~/.zshrc
+
+            <br>echo 'installing vim'
+            <br>sudo apt install vim -y
+            <br>clear
+
+            <br>echo 'installing code'
+            <br>curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+            <br>sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+            <br>sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" >
+            <br>/etc/apt/sources.list.d/vscode.list'
+            <br>sudo apt-get install apt-transport-https -y
+            <br>sudo apt-get update
+            <br>sudo apt-get install code -y # or code-insiders
+
+            <br>echo 'installing extensions'
+            <br>code --install-extension dbaeumer.vscode-eslint
+            <br>code --install-extension christian-kohler.path-intellisense
+            <br>code --install-extension dbaeumer.vscode-eslint
+            <br>code --install-extension dracula-theme.theme-dracula
+            <br>code --install-extension esbenp.prettier-vscode
+            <br>code --install-extension foxundermoon.shell-format
+            <br>code --install-extension pmneo.tsimporter
+            <br>code --install-extension waderyan.gitblame
+            <br>code --install-extension yzhang.markdown-all-in-one
+
+            <br>echo 'installing spotify'
+            <br>snap install spotify
+
+            <br>echo 'installing chrome'
+            <br>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            <br>sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+            <br>echo 'installing nvm'
+            <br>sh -c "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash)"
+
+            <br>export NVM_DIR="$HOME/.nvm" && (
+            <br>git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+            <br>cd "$NVM_DIR"
+            <br>git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+            <br>) && \. "$NVM_DIR/nvm.sh"
+
+            <br>export NVM_DIR="$HOME/.nvm"
+            <br>[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+            <br>source ~/.zshrc
+            <br>nvm --version
+            <br>nvm install 12
+            <br>nvm alias default 12
+            <br>node --version
+            <br>npm --version
+
+            <br>echo 'installing autosuggestions'
+            <br>git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+            <br>echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+            <br>source ~/.zshrc
+
+            <br>echo 'installing theme'
+            <br>sudo apt install fonts-firacode -y
+            <br>wget -O ~/.oh-my-zsh/themes/node.zsh-theme
+            <br>https://raw.githubusercontent.com/skuridin/oh-my-zsh-node-theme/master/node.zsh-theme
+            <br>sed -i 's/.*ZSH_THEME=.*/ZSH_THEME="node"/g' ~/.zshrc
+
+            <br>echo 'installing meet franz'
+            <br>wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
+            <br>sudo dpkg -i franz.debchristian-kohler.path-intellisense
+            <br>sudo apt-get install -y -f
+
+            <br>echo 'installing slack'
+            <br>wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
+            <br>sudo apt install ./slack-desktop-*.deb -y
+
+            <br>echo 'installing terminator'
+            <br>sudo apt-get update
+            <br>sudo apt-get install terminator -y
+
+            <br>echo 'adding dracula theme'
+            <br>cat &lt;&lt;EOF&gt; ~/.config/terminator/config
+            <br>[global_config]
+            <br>title_transmit_bg_color = "#ad7fa8"
+            <br>[keybindings]
+
+            <br>[layouts]
+            <br>[[default]]
+            <br>[[[child1]]]
+            <br>parent = window0
+            <br>type = Terminal
+            <br>[[[window0]]]
+            <br>parent = ""
+            <br>type = Window
+            <br>[plugins]
+            <br>[profiles]
+            <br>[[default]]
+            <br>cursor_color = "#aaaaaa"
+            <br>EOF
+
+            <br>cat &lt;&lt;EOF&gt;&gt; ~/.config/terminator/config
+            <br>[[Dracula]]
+            <br>background_color = "#1e1f29"
+            <br>background_darkness = 0.88
+            <br>background_type = transparent
+            <br>copy_on_selection = True
+            <br>cursor_color = "#bbbbbb"
+            <br>foreground_color = "#f8f8f2"
+            <br>palette =
+            <br>"#000000:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#bbbbbb:#555555:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#ffffff"
+            <br>scrollback_infinite = True
+            <br>EOF
+
+            <br>echo 'installing docker'
+            <br>sudo apt-get remove docker docker-engine docker.io
+            <br>sudo apt install docker.io -y
+            <br>sudo systemctl start docker
+            <br>sudo systemctl enable docker
+            <br>docker --version
+
+            <br>chmod 777 /var/run/docker.sock
+            <br>docker run hello-world
+
+            <br>echo 'installing docker-compose'
+            <br>sudo curl -L
+            <br>"https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname
+            <br>-s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            <br>sudo chmod +x /usr/local/bin/docker-compose
+            <br>docker-compose --version
+
+            <br>echo 'installing aws-cli'
+            <br>sudo apt-get install awscli -y
+            <br>aws --version
+            <br>curl
+            <br>"https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb"
+            <br>-o "session-manager-plugin.deb"
+            <br>sudo dpkg -i session-manager-plugin.deb
+            <br>session-manager-plugin --version
+
+            <br>echo 'installing teamviewer'
+            <br>wget
+            <br>https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+            <br>sudo apt install -y ./teamviewer_amd64.deb
+
+            <br>echo 'installing vnc-viewer'
+            <br>sudo apt-get install -y --no-install-recommends
+            <br>ubuntu-desktop gnome-panel gnome-settings-daemon
+            <br>metacity nautilus gnome-terminal
+            <br>sudo apt-get install vnc4server -y
+
+            <br>echo 'installing fzf'
+            <br>git clone --depth 1 https://github.com/junegunn/fzf.git
+            <br>~/.fzf
+            <br>~/.fzf/install --all
+
+            <br>echo 'installing brave'
+            <br>curl -s
+            <br>https://brave-browser-apt-release.s3.brave.com/brave-core.asc
+            <br>| sudo apt-key --keyring
+            <br>/etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+            <br>source /etc/os-release
+            <br>echo "deb [arch=amd64]
+            <br>https://brave-browser-apt-release.s3.brave.com/
+            <br>$UBUNTU_CODENAME main" | sudo tee
+            <br>/etc/apt/sources.list.d/brave-browser-release-$&#123;UBUNTU_CODENAME&#125;.list
+            <br>sudo apt update
+            <br>sudo apt install brave-keyring brave-browser
+
+            <br>echo 'installing dbeaver'
+            <br>wget -c
+            <br>https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
+            <br>sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
+            <br>sudo apt-get install -f
+        </div>
+    </div>
+</div>

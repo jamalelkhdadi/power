@@ -1,0 +1,159 @@
+<sami>
+<head>
+<Title>DevOps vs Agile _ DevOps Tutorial For Beginners _ DevOps Training _ Knowledgehut_HD</Title>
+<style type='text/css'><!--
+.en { Name:English; lang:en; SAMIType:CC; }
+--></style>
+</head>
+<body>
+<SYNC Start=6560><P class='en'>Hello and welcome to knowledgehut.
+<SYNC Start=9000><P class='en'>&nbsp;
+<SYNC Start=9000><P class='en'>In the IT Industry, many people get confused
+between DevOps and Agile.
+<SYNC Start=14209><P class='en'>&nbsp;
+<SYNC Start=14209><P class='en'>In this DevOps vs Agile video, we will be
+trying to uncover some of the major differences
+<SYNC Start=19510><P class='en'>&nbsp;
+<SYNC Start=19510><P class='en'>between both of them.
+<SYNC Start=20920><P class='en'>&nbsp;
+<SYNC Start=20920><P class='en'>So let us begin.
+<SYNC Start=22250><P class='en'>&nbsp;
+<SYNC Start=22250><P class='en'>First, What they are?
+<SYNC Start=24609><P class='en'>&nbsp;
+<SYNC Start=24609><P class='en'>While Agile refers to an iterative approach
+which focuses on collaboration, customer feedback,
+<SYNC Start=31039><P class='en'>&nbsp;
+<SYNC Start=31039><P class='en'>and small, rapid releases.
+<SYNC Start=32870><P class='en'>&nbsp;
+<SYNC Start=32870><P class='en'>DevOps is considered a practice of bringing
+development and operations teams together.
+<SYNC Start=39080><P class='en'>&nbsp;
+<SYNC Start=39080><P class='en'>What are their Purpose?
+<SYNC Start=40590><P class='en'>&nbsp;
+<SYNC Start=40590><P class='en'>While Agile helps to manage complex projects.
+<SYNC Start=44380><P class='en'>&nbsp;
+<SYNC Start=44380><P class='en'>DevOps’ central concept is to manage end-to-end
+engineering processes.
+<SYNC Start=50370><P class='en'>&nbsp;
+<SYNC Start=50370><P class='en'>Task
+Agile process focuses on constant changes.
+<SYNC Start=54610><P class='en'>&nbsp;
+<SYNC Start=54610><P class='en'>DevOps focuses on constant testing and delivery.
+<SYNC Start=59860><P class='en'>&nbsp;
+<SYNC Start=59860><P class='en'>Implementation
+Agile method can be implemented within a range
+<SYNC Start=63600><P class='en'>&nbsp;
+<SYNC Start=63600><P class='en'>of tactical frameworks like safe
+and scrum.
+<SYNC Start=66930><P class='en'>&nbsp;
+<SYNC Start=66930><P class='en'>The primary goal of DevOps is to focus on
+collaboration, so it doesn&#39;t have any commonly
+<SYNC Start=72570><P class='en'>&nbsp;
+<SYNC Start=72570><P class='en'>accepted framework.
+<SYNC Start=75170><P class='en'>&nbsp;
+<SYNC Start=75170><P class='en'>Team skill set
+Agile development emphasizes training all
+<SYNC Start=79340><P class='en'>&nbsp;
+<SYNC Start=79340><P class='en'>team members to have a wide variety of similar
+and equal skills.
+<SYNC Start=83829><P class='en'>&nbsp;
+<SYNC Start=83829><P class='en'>DevOps divides and spreads the skill set between
+the development and operation teams.
+<SYNC Start=90200><P class='en'>&nbsp;
+<SYNC Start=90200><P class='en'>Team size
+Small Team is at the core of Agile.
+<SYNC Start=94380><P class='en'>&nbsp;
+<SYNC Start=94380><P class='en'>As smaller is the team, the fewer people on
+it, the faster they can move.
+<SYNC Start=98930><P class='en'>&nbsp;
+<SYNC Start=98930><P class='en'>Devops has relatively larger team size as
+it involves all the stakeholders
+<SYNC Start=105319><P class='en'>&nbsp;
+<SYNC Start=105319><P class='en'>Feedback
+In Agile, Feedback is given by the customer.
+<SYNC Start=108869><P class='en'>&nbsp;
+<SYNC Start=108869><P class='en'>In DevOps(In DevOps repeated twice) While
+Feedback comes from the internal team.
+<SYNC Start=114619><P class='en'>&nbsp;
+<SYNC Start=114619><P class='en'>Emphasis
+Agile emphasizes on software development,
+<SYNC Start=118360><P class='en'>&nbsp;
+<SYNC Start=118360><P class='en'>the process ends at the development stage
+and then there is no focus on operations.
+<SYNC Start=123689><P class='en'>&nbsp;
+<SYNC Start=123689><P class='en'>DevOps emphasizes not only on the development
+process but also on the operation or monitoring
+<SYNC Start=130119><P class='en'>&nbsp;
+<SYNC Start=130119><P class='en'>process.
+<SYNC Start=131119><P class='en'>&nbsp;
+<SYNC Start=131119><P class='en'>It takes ready-to-release software and deploys
+it in a reliable and secure manner.
+<SYNC Start=137890><P class='en'>&nbsp;
+<SYNC Start=137890><P class='en'>Goal
+Agile addresses the gap between customer need
+<SYNC Start=141849><P class='en'>&nbsp;
+<SYNC Start=141849><P class='en'>and development &amp; testing teams.
+<SYNC Start=144310><P class='en'>&nbsp;
+<SYNC Start=144310><P class='en'>Devops addresses the gap between development
++ testing and operation.
+<SYNC Start=149730><P class='en'>&nbsp;
+<SYNC Start=149730><P class='en'>Focus
+Agile focuses on functional and non-function
+<SYNC Start=153660><P class='en'>&nbsp;
+<SYNC Start=153660><P class='en'>readiness.
+<SYNC Start=154660><P class='en'>&nbsp;
+<SYNC Start=154660><P class='en'>Devops focuses on operational and business
+readiness.
+<SYNC Start=159909><P class='en'>&nbsp;
+<SYNC Start=159909><P class='en'>Importance
+Developing software is inherent to Agile.
+<SYNC Start=164220><P class='en'>&nbsp;
+<SYNC Start=164220><P class='en'>Developing, testing and implementation all
+are equally important in DevOps.
+<SYNC Start=170120><P class='en'>&nbsp;
+<SYNC Start=170120><P class='en'>Speed vs. Risk
+Teams using Agile support rapid change, and
+<SYNC Start=175060><P class='en'>&nbsp;
+<SYNC Start=175060><P class='en'>on a robust application
+structure.
+<SYNC Start=177100><P class='en'>&nbsp;
+<SYNC Start=177120><P class='en'>In the DevOps method, the teams must make
+sure that the changes which were made
+<SYNC Start=181480><P class='en'>&nbsp;
+<SYNC Start=181480><P class='en'>to the architecture never develop a risk to
+the entire project.
+<SYNC Start=187799><P class='en'>&nbsp;
+<SYNC Start=187799><P class='en'>Quality
+Agile produces better applications suites
+<SYNC Start=191049><P class='en'>&nbsp;
+<SYNC Start=191049><P class='en'>with the desired requirements.
+<SYNC Start=193069><P class='en'>&nbsp;
+<SYNC Start=193069><P class='en'>It can easily adapt according to the changes
+made on time, during the project life.
+<SYNC Start=198629><P class='en'>&nbsp;
+<SYNC Start=198629><P class='en'>DevOps, along with automation and early bug
+removal, contributes to creating better quality.
+<SYNC Start=205860><P class='en'>&nbsp;
+<SYNC Start=205860><P class='en'>Developers need to follow Coding and Architectural
+best practices to maintain quality standards.
+<SYNC Start=213000><P class='en'>&nbsp;
+<SYNC Start=213000><P class='en'>Advantage
+Agile offers a shorter software development
+<SYNC Start=216390><P class='en'>&nbsp;
+<SYNC Start=216390><P class='en'>cycle and improved defect detection.
+<SYNC Start=219730><P class='en'>&nbsp;
+<SYNC Start=219730><P class='en'>DevOps supports Agile release cycle.
+<SYNC Start=222599><P class='en'>&nbsp;
+<SYNC Start=222599><P class='en'>So these were some differences between DevOps
+and Agile.
+<SYNC Start=226290><P class='en'>&nbsp;
+<SYNC Start=226290><P class='en'>We hope this video helped you to understand
+both of them.
+<SYNC Start=229269><P class='en'>&nbsp;
+<SYNC Start=229269><P class='en'>Don’t forget subscribe to our channel for
+more such videos and visit our website courses
+<SYNC Start=234480><P class='en'>&nbsp;
+<SYNC Start=234480><P class='en'>which can give a leap to your career.
+<SYNC Start=237099><P class='en'>&nbsp;
+</body>
+</sami>
